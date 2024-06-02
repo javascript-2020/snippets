@@ -31,56 +31,63 @@
                     }
                     
               </style>
-              
-              <style>
-              
-                    #icon {
-                          display               : inline-block;
-                    }
-                    
-                    #card {
-                          display               : inline-block;
-                          text-align            : center;
-                          background            : whitesmoke;
-                          border-radius         : 5px;
-                          border                : 1px solid lightgray;
-                          padding               : 5px;
-                          cursor                : pointer;
-                          margin-right          : 10px;
-                          min-width             : 50px;
-                          font-family           : arial;
-                    }
-              
-                    #img {
-                          margin-right          : 5px;
-                          vertical-align        : middle;
-                          width                 : 18px;
-                    }
-                    
-                    #label {
-                          margin                : 2px 0 3px;
-                          vertical-align        : middle;
-                    }
-                    
-                    #img2 {
-                          vertical-align        : middle;
-                          width                 : 10px;
-                          margin-left           : 5px;
-                    }
-                    
-              </style>
 
               <input type=button value=remove>
               <input type=button value=download>
+              <input type=button value=save>
 
 
+              <div id=root>
 
-              <div id=icon>
-                    <span id=card>
-                        <img id=img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAALxJREFUOE9jPKio/p+BioCR9gb+J9HBjIwo/kNxIauwMAOvjjZJAfD5ylWG32/fwvUgDPz/n0HIwZ5BZ/4skgy8kpjG8O7AQQYGqEsHxsDfb94y3G3tYPjz4SPY9bz6ugzyBblgNlkuBBl4xtOP4febNwwMoKBxdIAHDWUGggIfLaxHDWQgKtnAI2U0DPEnbAYGBlyFw78/vxk+HD0Oz+PI6nAXDjDl2IovtCIKrBSmDl/xRVIxg0Mx1UtsAMPADMS87x0xAAAAAElFTkSuQmCC">
-                        <span id=label>npm</span>
-                        <img id=img2 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAUNJREFUOE+dks1Kw1AQhc/MTZq2G0ERpFK6sC6KPoDgxp0v48bnEHwtH0CoIiJSKcF9jU2be48kaWpbkjY6u/v3nblzjqhYkshKIHBQyVdFzS4UeCDM+vZiJQJL6ATCAEKFRWMDkN7koZh4TNvwNyk5QOYwJrzyEv2YovdWKoWoKxKMyHX+EhDw86T6cfHF2ZDwBqsCNQFsKeyrE3ZATYcFLDqpAWBbEH9RFXAeRN03nelCXAiKvxMgEoVEcJQqqknQDPxOFEkIsAd171sBopMhXXuQmgvjQMszIBguZ+DNLysBqvae5C1BqJipc9IHZFxpY6kLGt/ByQ3QaJVbC+ycAcDjMuUCWANQpb3IRpHEOkFaRQXe03WcnO79uwPff36cJ/3zHAALzx+9AMlse8O/p87t9607aGaA1Kosnn8qyeL8A59Dv39nnMLwAAAAAElFTkSuQmCC">
-                    </span>
+              
+                    <style>
+                    
+                          #icon {
+                                display               : inline-block;
+                          }
+                          
+                          #card {
+                                display               : inline-block;
+                                text-align            : center;
+                                background            : whitesmoke;
+                                border-radius         : 5px;
+                                border                : 1px solid lightgray;
+                                padding               : 5px;
+                                cursor                : pointer;
+                                margin-right          : 10px;
+                                min-width             : 50px;
+                                font-family           : arial;
+                          }
+                    
+                          #img {
+                                margin-right          : 5px;
+                                vertical-align        : middle;
+                                width                 : 18px;
+                          }
+                          
+                          #label {
+                                margin                : 2px 0 3px;
+                                vertical-align        : middle;
+                          }
+                          
+                          #img2 {
+                                vertical-align        : middle;
+                                width                 : 10px;
+                                margin-left           : 5px;
+                          }
+                          
+                    </style>
+      
+      
+                    <div id=icon>
+                          <span id=card>
+                              <img id=img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAALxJREFUOE9jPKio/p+BioCR9gb+J9HBjIwo/kNxIauwMAOvjjZJAfD5ylWG32/fwvUgDPz/n0HIwZ5BZ/4skgy8kpjG8O7AQQYGqEsHxsDfb94y3G3tYPjz4SPY9bz6ugzyBblgNlkuBBl4xtOP4febNwwMoKBxdIAHDWUGggIfLaxHDWQgKtnAI2U0DPEnbAYGBlyFw78/vxk+HD0Oz+PI6nAXDjDl2IovtCIKrBSmDl/xRVIxg0Mx1UtsAMPADMS87x0xAAAAAElFTkSuQmCC">
+                              <span id=label>npm</span>
+                              <img id=img2 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAUNJREFUOE+dks1Kw1AQhc/MTZq2G0ERpFK6sC6KPoDgxp0v48bnEHwtH0CoIiJSKcF9jU2be48kaWpbkjY6u/v3nblzjqhYkshKIHBQyVdFzS4UeCDM+vZiJQJL6ATCAEKFRWMDkN7koZh4TNvwNyk5QOYwJrzyEv2YovdWKoWoKxKMyHX+EhDw86T6cfHF2ZDwBqsCNQFsKeyrE3ZATYcFLDqpAWBbEH9RFXAeRN03nelCXAiKvxMgEoVEcJQqqknQDPxOFEkIsAd171sBopMhXXuQmgvjQMszIBguZ+DNLysBqvae5C1BqJipc9IHZFxpY6kLGt/ByQ3QaJVbC+ycAcDjMuUCWANQpb3IRpHEOkFaRQXe03WcnO79uwPff36cJ/3zHAALzx+9AMlse8O/p87t9607aGaA1Kosnn8qyeL8A59Dv39nnMLwAAAAAElFTkSuQmCC">
+                          </span>
+                    </div>
+
+                    
               </div>
                     
 
@@ -103,6 +110,9 @@
               img.src             = url;
               iframe.contentDocument.body.append(img);
                     
+              var btn             = iframe.contentDocument.querySelector('[value=save]');
+              btn.onclick         = save;
+                    
               var btn             = iframe.contentDocument.querySelector('[value=remove]');
               btn.onclick         = e=>iframe.remove();
               
@@ -111,7 +121,7 @@
               
                     var a               = document.createElement('a');
                     a.href              = url;
-                    a.download          = 'home.png';
+                    a.download          = 'icon.png';
                     a.click();
                     
               }
@@ -119,6 +129,22 @@
         }//onload
         
         document.body.append(iframe);
+        
+        
+        function save(){
+        
+              var node      = iframe.contentDocument.querySelector('#root');
+              var html      = node.outerHTML;
+              var blob      = new Blob([html],{type:'text/html'});
+              var url       = window.URL.createObjectURL(blob);
+              var a         = document.createElement('a');
+              a.href        = url;
+              a.download    = 'icon.html';
+              a.click();
+              
+        }//save
+        
+        
 
         
 })();
