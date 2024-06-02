@@ -33,10 +33,14 @@
               </style>
 
               <input type=button value=remove>
-              <input type=button value=download>
+              <input type=button value=load>
               <input type=button value=save>
+              <input type=button value=download>
 
 
+              <!-- user -->
+
+              
               <div id=root>
 
               
@@ -44,6 +48,7 @@
                     
                           #icon {
                                 display               : inline-block;
+                                font-family           : arial;
                           }
                           
                           #card {
@@ -55,8 +60,6 @@
                                 padding               : 5px;
                                 cursor                : pointer;
                                 margin-right          : 10px;
-                                min-width             : 50px;
-                                font-family           : arial;
                           }
                     
                           #img {
@@ -89,15 +92,26 @@
 
                     
               </div>
+
                     
+              <!-- user -->
 
         
         `;
 
         
-        var iframe      = document.createElement('iframe');
-        iframe.srcdoc   = srcdoc;
-        iframe.onload   = onload;
+        var iframe;
+        
+        create();
+        
+        
+        function create(){
+        
+              iframe          = document.createElement('iframe');
+              iframe.srcdoc   = srcdoc;
+              iframe.onload   = onload;
+              
+        }//create
         
         async function onload(){
         
@@ -110,6 +124,9 @@
               img.src             = url;
               iframe.contentDocument.body.append(img);
                     
+              var btn             = iframe.contentDocument.querySelector('[value=load]');
+              btn.onclick         = load;
+              
               var btn             = iframe.contentDocument.querySelector('[value=save]');
               btn.onclick         = save;
                     
@@ -144,7 +161,26 @@
               
         }//save
         
+        function load(){
         
+              var input         = document.createElement('input');
+              input.type        = 'file';
+              input.onchange    = onchange;
+              input.click();
+              
+              async function onchange(){
+              
+                    var txt   = await input.files[0].text();
+                    var i1    = srcdoc.indexOf('<!-- user -->');
+                    i1        = srcdoc.indexOf('\n',i1);
+                    var i2    = srcdoc.indexOf('<!-- user -->',i1);
+                    i2        = srcdoc.lastIndexOf('\n',i2);
+                    srcdoc    = srcdoc.slice(0,o1+1)+txt+srcdoc.slice(i2);
+                    create();
+                    
+              }//onchange
+              
+        }//load
 
         
 })();
