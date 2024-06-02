@@ -15,45 +15,72 @@
         
               <style>
               
-                    .icon {
-                          display         : inline-block;
-                          text-align      : center;
-                          background      : whitesmoke;
-                          border-radius   : 5px;
-                          border          : 1px solid lightgray;
-                          padding         : 5px;
-                          cursor          : pointer;
-                          margin-right    : 10px;
-                          min-width       : 50px;
-                          font-family     : arial;
-                    }
-              
-                    .img {
-                          margin-right:5px;
-                          vertical-align:middle;
-                          width:18px;
+                    body {
+                          margin                : 20px;
+                          display:flex;
+                          align-items:center;
+                          gap:20px;
                     }
                     
-                    .label {
-                          margin          : 2px 0 3px;
-                          vertical-align  : middle;
+                    #btns {
+                          margin-bottom         : 20px;
                     }
                     
-                    .img2 {
-                          vertical-align:middle;
-                          width:10px;
-                          margin-left:5px;
+                    #generated {
+                          border                : 2px solid lightblue;
                     }
                     
               </style>
               
-              <div id="github-repo" class="icon">
-                  <img class=img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAASpJREFUOE/F078rxlEUx/HXY7DYrMpCZJIoA0VRRkr5E1iVXyUrUQxWJomShVUMYjBgIbIoq8WiZMFzde/Tt2/PD5tb377dc+7n3bmfe05B+TWHOoyjFYd4xhGespJCTt+HywrQFN7FLF5DIAtYw3wNcUp/o7NY4V0CTOCgSH7HDQYqgB7wgW68oTEA6vEZBecYjJUtYzED6sBj3IcKwtoPgAWs5gC1bpIAvx7coisqNjFdS40XNCcTS7ScqdU4peuFCv4fcIH+WO8xxv7gQXjuhuRB9hVCbBuTFSC92ENLygcPwvcVe304/kN+ClsZUJiBthx4J3ViIF9hCdex01Zyh08xlImFju3JzsIM1uOghHMbVQBhMkdxn5/GdpwVfWgq0xOpghOMJPgPHK86T+Ou4oMAAAAASUVORK5CYII=">
-                  <span class="label">github repos</span>
-                  <img class=img2 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAUNJREFUOE+dks1Kw1AQhc/MTZq2G0ERpFK6sC6KPoDgxp0v48bnEHwtH0CoIiJSKcF9jU2be48kaWpbkjY6u/v3nblzjqhYkshKIHBQyVdFzS4UeCDM+vZiJQJL6ATCAEKFRWMDkN7koZh4TNvwNyk5QOYwJrzyEv2YovdWKoWoKxKMyHX+EhDw86T6cfHF2ZDwBqsCNQFsKeyrE3ZATYcFLDqpAWBbEH9RFXAeRN03nelCXAiKvxMgEoVEcJQqqknQDPxOFEkIsAd171sBopMhXXuQmgvjQMszIBguZ+DNLysBqvae5C1BqJipc9IHZFxpY6kLGt/ByQ3QaJVbC+ycAcDjMuUCWANQpb3IRpHEOkFaRQXe03WcnO79uwPff36cJ/3zHAALzx+9AMlse8O/p87t9607aGaA1Kosnn8qyeL8A59Dv39nnMLwAAAAAElFTkSuQmCC">
-              </div>
+              <style>
               
+                    #icon {
+                          display:inline-block;
+                    }
+                    
+                    .card {
+                          display               : inline-block;
+                          text-align            : center;
+                          background            : whitesmoke;
+                          border-radius         : 5px;
+                          border                : 1px solid lightgray;
+                          padding               : 5px;
+                          cursor                : pointer;
+                          margin-right          : 10px;
+                          min-width             : 50px;
+                          font-family           : arial;
+                    }
+              
+                    .img {
+                          margin-right          : 5px;
+                          vertical-align        : middle;
+                          width                 : 18px;
+                    }
+                    
+                    .label {
+                          margin                : 2px 0 3px;
+                          vertical-align        : middle;
+                    }
+                    
+                    .img2 {
+                          vertical-align        : middle;
+                          width                 : 10px;
+                          margin-left           : 5px;
+                    }
+                    
+              </style>
+
+              <input type=button value=remove>
               <input type=button value=download>
+
+              <div id=icon>
+                    <span class="card">
+                        <img class=img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAALxJREFUOE9jPKio/p+BioCR9gb+J9HBjIwo/kNxIauwMAOvjjZJAfD5ylWG32/fwvUgDPz/n0HIwZ5BZ/4skgy8kpjG8O7AQQYGqEsHxsDfb94y3G3tYPjz4SPY9bz6ugzyBblgNlkuBBl4xtOP4febNwwMoKBxdIAHDWUGggIfLaxHDWQgKtnAI2U0DPEnbAYGBlyFw78/vxk+HD0Oz+PI6nAXDjDl2IovtCIKrBSmDl/xRVIxg0Mx1UtsAMPADMS87x0xAAAAAElFTkSuQmCC">
+                        <span class="label">npm</span>
+                        <img class=img2 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAUNJREFUOE+dks1Kw1AQhc/MTZq2G0ERpFK6sC6KPoDgxp0v48bnEHwtH0CoIiJSKcF9jU2be48kaWpbkjY6u/v3nblzjqhYkshKIHBQyVdFzS4UeCDM+vZiJQJL6ATCAEKFRWMDkN7koZh4TNvwNyk5QOYwJrzyEv2YovdWKoWoKxKMyHX+EhDw86T6cfHF2ZDwBqsCNQFsKeyrE3ZATYcFLDqpAWBbEH9RFXAeRN03nelCXAiKvxMgEoVEcJQqqknQDPxOFEkIsAd171sBopMhXXuQmgvjQMszIBguZ+DNLysBqvae5C1BqJipc9IHZFxpY6kLGt/ByQ3QaJVbC+ycAcDjMuUCWANQpb3IRpHEOkFaRQXe03WcnO79uwPff36cJ/3zHAALzx+9AMlse8O/p87t9607aGaA1Kosnn8qyeL8A59Dv39nnMLwAAAAAElFTkSuQmCC">
+                    </span>
+              </div>
+                    
         
         `;
         
@@ -63,16 +90,19 @@
         
         async function onload(){
         
-              var blob            = await window.toBlob(iframe.contentDocument.querySelector('.icon'));
+              var icon            = iframe.contentDocument.querySelector('#icon');
+              var blob            = await window.toBlob(icon);
               var url             = window.URL.createObjectURL(blob);
               
               var img             = document.createElement('img');
+              img.id              = 'generated';
               img.src             = url;
               iframe.contentDocument.body.append(img);
                     
-              img.onclick         = e=>iframe.remove();
+              var btn             = iframe.contentDocument.querySelector('[value=remove]');
+              btn.onclick         = e=>iframe.remove();
               
-              var btn             = iframe.contentDocument.querySelector('[type=button]');
+              var btn             = iframe.contentDocument.querySelector('[value=download]');
               btn.onclick         = e=>{
               
                     var a               = document.createElement('a');
@@ -87,6 +117,10 @@
         document.body.append(iframe);
 
         
-})();        
+})();
+
+
+
+
 
 
