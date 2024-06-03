@@ -1,0 +1,79 @@
+
+(async()=>{
+
+
+        var txt   = editor.getValue();
+        var i1    = txt.indexOf('**'+'*')+3;
+        var i2    = txt.indexOf('**'+'*',i1)-2;
+        var js    = txt.slice(i1,i2);
+        
+        require('fs').writeFileSync('/work/tmp/script.js',js);
+        require('child_process').execFile('node',['/work/tmp/script.js'],(err,stdout,stderr)=>{
+        
+              console.log(stdout);
+              console.log(stderr);
+              
+        });
+        
+        return;
+        
+        
+        
+//***
+
+
+
+(async()=>{
+
+
+      async function blob_b64(blob){
+      
+            var buf     = await blob.arrayBuffer();
+            var bytes   = new Uint8Array(buf);
+            var bin     = String.fromCharCode(...bytes);
+            var b64     = btoa(bin);
+            return b64;
+      
+      }//blob_b64
+
+
+      function b64_blob(b64,type='text/plain'){
+      
+            var bin     = atob(b64);
+            var bytes   = [...bin].map(c=>c.charCodeAt(0));
+            var buf     = new Uint8Array(bytes);
+            var blob    = new Blob([buf],{type});
+            return blob;
+            
+      }//b64_blob
+      
+
+
+
+  //test
+  
+      var blob    = new Blob(['helloworld']);
+
+      
+      var b64     = await blob_b64(blob);
+      
+      var blob    = b64_blob(b64);      
+
+
+      console.log(b64);                     //  aGVsbG93b3JsZA==
+      console.log(await blob.text());       //  helloworld
+
+
+})();
+
+
+
+
+//***
+
+
+
+})();
+
+
+
