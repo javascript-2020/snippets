@@ -171,12 +171,14 @@
               async function onchange(){
               
                     var txt   = await input.files[0].text();
-                    var i1    = srcdoc.indexOf('<!-- user -->');
-                    i1        = srcdoc.indexOf('\n',i1);
-                    var i2    = srcdoc.indexOf('<!-- user -->',i1);
-                    i2        = srcdoc.lastIndexOf('\n',i2);
-                    srcdoc    = srcdoc.slice(0,o1+1)+txt+srcdoc.slice(i2);
-                    create();
+                    var src   = editor.getValue();
+                    var i1    = src.indexOf('<!-- user -->');
+                    i1        = src.indexOf('\n',i1);
+                    var i2    = src.indexOf('<!-- user -->',i1);
+                    i2        = src.lastIndexOf('\n',i2);
+                    src       = src.slice(0,i1+1)+txt+src.slice(i2);
+                    editor.setValue(src);
+                    execute();
                     
               }//onchange
               
