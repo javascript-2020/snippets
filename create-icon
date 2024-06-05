@@ -157,8 +157,15 @@
         
         function save(){
         
-              var node      = iframe.contentDocument.querySelector('#root');
-              var html      = node.outerHTML;
+              var src       = editor.getValue();
+              var i1        = src.indexOf('<!-- user -->');
+              i1            = src.indexOf('\n',i1);
+              var i2        = src.indexOf('<!-- user -->',i1);
+              i2            = src.lastIndexOf('\n',i2);
+              var html      = src.slice(i1+1,i2);
+              console.log(html);
+              return;
+              
               var blob      = new Blob([html],{type:'text/html'});
               var url       = window.URL.createObjectURL(blob);
               var a         = document.createElement('a');
