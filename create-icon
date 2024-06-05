@@ -163,8 +163,6 @@
               var i2        = src.indexOf('<!-- user -->',i1);
               i2            = src.lastIndexOf('\n',i2);
               var html      = src.slice(i1+1,i2);
-              console.log(html);
-              return;
               
               var blob      = new Blob([html],{type:'text/html'});
               var url       = window.URL.createObjectURL(blob);
