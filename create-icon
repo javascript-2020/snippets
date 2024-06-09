@@ -101,8 +101,9 @@
         
         var hldr    = $('#icon-hldr');
         if(!hldr){
-              hldr      = document.createElement('div');
-              hldr.id   = 'icon-hldr';
+              hldr                  = document.createElement('div');
+              hldr.style.cssText    = 'display:flex;';
+              hldr.id               = 'icon-hldr';
               document.body.append(hldr);
         }
         
