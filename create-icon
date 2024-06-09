@@ -102,7 +102,7 @@
         var hldr    = $('#icon-hldr');
         if(!hldr){
               hldr                  = document.createElement('div');
-              hldr.style.cssText    = 'display:flex;';
+              hldr.style.cssText    = 'display:flex;flex-direction:column;';
               hldr.id               = 'icon-hldr';
               document.body.append(hldr);
         }
